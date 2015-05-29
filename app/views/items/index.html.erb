@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <th>id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Weight</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+    <% @items.each do |i| %>
+        <tr>
+            <td><%= i.id%></td>
+            <td><%= link_to i.name, item_path(i) %></td>
+            <td><%= i.price%> $ </td>
+            <td><%= i.weight%> ft. </td>
+            <td><%= link_to "edit", edit_item_path(i) %></td>
+            <td><%= link_to "x", item_path(i), method: :delete, data: { confirm: "You sure?" } %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

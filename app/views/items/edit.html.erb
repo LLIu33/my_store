@@ -1,0 +1,22 @@
+<h2>Edit Item</h2>
+
+<%= form_for @item do |f| %>
+    <p>
+        Price: <br />
+        <%= f.text_field :price %>
+    </p>
+    <p>
+        Name: <br />
+        <%= f.text_field :name %>
+    </p>
+    <p>
+        Decription: <br />
+        <%= f.text_field :description %>
+    </p>
+    <p>
+        Weight: <br />
+        <%= f.text_field :weight %>
+    </p>
+
+    <p><%= f.submit "Update" %></p>
+<% end %>
